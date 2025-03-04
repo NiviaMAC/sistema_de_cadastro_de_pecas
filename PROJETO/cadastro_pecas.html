@@ -32,14 +32,14 @@
             }
             //Se o tipo for 2, o sistema deve subtrair a quantidade do saldo.
             if(tipo==2){
-                if(saldo>=quantidade{
+                if(saldo>=quantidade){
 
                     //Se o saldo for maior ou igual à quantidade, o sistema deve subtrair a quantidade do saldo e mostrar o texto Saída: seguido da quantidade e de uma quebra de linha.
                     saldo=saldo-quantidade;
                     document.write("Saída: "+quantidade+"<br>");
 
                     //Caso contrário (senão), o sistema deve mostrar o texto Saldo insuficiente, além de um alerta de Saldo insuficiente. A função alert(); mostra um aviso com o texto dentro de parênteses. Mas o texto vem sempre entre aspas duplas para sinalizar uma string.
-                })else{
+                }else{
                     document.write("Saldo insuficiente"+"<br>");
                     alert("Saldo insuficiente");
                 }
