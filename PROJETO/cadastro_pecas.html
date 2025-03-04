@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //A variável "saldo" receberá a quantidade do saldo inicial. Além disso, a função "prompt", usada para a entrada de dados, pressupõe variável do tipo string, sendo, por isso, a justificativa do uso do método "parseInt" para transfomar uma string em número inteiro. Daí, o usuário receber a orientação para inforrmar o saldo inicial:
+        saldo=parseInt(prompt("Informe o saldo inicial"));
+
+        //A função "document.write", a seguir, mostra o valor do saldo inicial. Além disso, acrescentei o texto que vai entre as aspcas, como string para o usuário e, ainda, acrescentei a tag saldo para exibir o valor e, também, fiz uso da tag <br> para pula linha:
+        document.write  ("Saldo inicial: "+saldo+"<br>");
+
+        //o sistema recebe o atributo "encerrar" para receber dois valores, sendo o valor "n" para NÃO encerrar o sistema e o valor "s" para ENCERRAR o sistema. No caso, a seguir, a variável "encerrar" foi criada e recebeu o valor "n" para NÃO encerrar o sistema:
+        encerrar="n";
+
+        //enquanto: agora é criado um laço de repetição com "while" e entre parênteses há a condição se vai continuar ou não a repetição. E entre as chaves vão as instruções que serão repetidas, caso a condição seja atendida. A condição do "while" é a variável "encerrar". Se "encerrar" for igual a "n", todas as instruções dentro do "while" serão executadas. Se "encerrar" for igual a "s", então, o while não será executado, e o sistema executará a instrução fora do "while". Assim, portanto, no exemplo, se "encerrar" for igual a "s", o sistema executará o "document.write" e mostrará o texto "Sistema encerrado", seguido de uma quebra de linha. Observe que = significa atribuição de valor para o atributo; já o == significa igual.
+        while(encerrar=="n"){
+        
+            //O sistema realiza duas operações: somar as entradas de peças e subtrair as saídas. Crie a variável tipo para diferenciar essas duas operações. Por definição prévia, as entradas serão do tipo 1 e as saídas do tipo 2.
+            tipo=parseInt(prompt("Informe o tipo de entrada (1 ou 2)"));
+
+            //É criada, também, a variável quantidade, para receber o valor a ser somado ou subtraído do estoque pelo usuário. Assim, quantas peças o usuário vai (informar) estar comprando?
+            quantidade=parseInt(prompt("Informe a quantidade"));
+
+            //se: Então, se o tipo for 1, o sistema deve somar a quantidade ao saldo.
+            if(tipo==1){
+                saldo=saldo+quantidade;
+
+                //O document.write mostra o texto Entrada: seguido pela quantidade e por uma quebra de linha "<br>".
+                document.write("Entrada:"+quantidade+"<br>");
+            }
+            //Se o tipo for 2, o sistema deve subtrair a quantidade do saldo.
+            if(tipo==2){
+                if(saldo>=quantidade{
+
+                    //Se o saldo for maior ou igual à quantidade, o sistema deve subtrair a quantidade do saldo e mostrar o texto Saída: seguido da quantidade e de uma quebra de linha.
+                    saldo=saldo-quantidade;
+                    document.write("Saída: "+quantidade+"<br>");
+
+                    //Caso contrário (senão), o sistema deve mostrar o texto Saldo insuficiente, além de um alerta de Saldo insuficiente. A função alert(); mostra um aviso com o texto dentro de parênteses. Mas o texto vem sempre entre aspas duplas para sinalizar uma string.
+                })else{
+                    document.write("Saldo insuficiente"+"<br>");
+                    alert("Saldo insuficiente");
+                }
+            }
+            document.write("Saldo: "+saldo+"<br>");
+            encerrar=prompt("Deseja encerrar? (s/n)");
+        }//chave do "while"
+        document.writer("Sistema encerrado!"+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
